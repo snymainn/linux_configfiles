@@ -1,0 +1,9 @@
+# Copy or link this file in ~/.local/share/applications/
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=false
+Exec=hyprshot -m region -o /home/tommy/Pictures/
+Name=Screenshot
+Comment=Custom definition for hyprshot
