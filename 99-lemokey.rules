@@ -1,0 +1,16 @@
+# Leave this here in case it is necessary for firmware upgrades
+#KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess", OPTIONS+="static_node=uinput"
+
+# USB-connected receivers and devices from Lemokey
+ATTRS{idVendor}=="362d", GOTO="lemokey_apply"
+
+# Wireless Lemokey receiver
+ATTRS{idVendor}=="362d", ATTRS{idProduct}=="d028", GOTO="lemokey_apply"
+
+LABEL="lemokey_apply"
+
+# Allow any seated user to access the receiver.
+# uaccess: modern ACL-enabled udev
+TAG+="uaccess"
+
+
