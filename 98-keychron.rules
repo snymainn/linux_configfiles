@@ -1,13 +1,13 @@
 # Leave this here in case it is necessary for firmware upgrades
 #KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess", OPTIONS+="static_node=uinput"
 
-# USB-connected receivers and devices from Lemokey
-ATTRS{idVendor}=="362d", GOTO="lemokey_apply"
+# USB-connected receivers and devices from Keychron
+ATTRS{idVendor}=="3434", GOTO="keychron_apply"
 
-# Wireless Lemokey receiver
-ATTRS{idVendor}=="362d", ATTRS{idProduct}=="d028", GOTO="lemokey_apply"
+# Wireless Keychron receiver
+ATTRS{idVendor}=="3434", ATTRS{idProduct}=="d026", GOTO="keychron_apply"
 
-LABEL="lemokey_apply"
+LABEL="keychron_apply"
 
 # Allow any seated user to access the receiver.
 # uaccess: modern ACL-enabled udev
