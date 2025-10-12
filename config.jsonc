@@ -140,7 +140,7 @@
 			"poweroff": "poweroff",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			//"hibernate": "systemctl hibernate"
 		}
     }
 }
