@@ -1,0 +1,11 @@
+#!/bin/sh
+# If running in an interactive shell, call system rm unchanged
+if [ -t 1 ] || [ -n "$PS1" ]; then
+  exec /bin/rm -i "$@"
+else
+  # If -f already present, just exec
+  for a in "$@"; do
+    [ "$a" = "-f" ] && exec /bin/rm "$@"
+  done
+  exec /bin/rm -f "$@"
+fi
