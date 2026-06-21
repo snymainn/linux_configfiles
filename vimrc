@@ -18,3 +18,7 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
+" Aktiver filtype‑deteksjon og plugin/syntax
+filetype plugin indent on
+syntax on
+
