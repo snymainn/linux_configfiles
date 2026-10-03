@@ -244,6 +244,16 @@ hl.window_rule({
     workspace = "special:magic silent",
 })
 
+hl.window_rule({
+    match = {
+        class = "^(.*vivaldi-stable)$",
+    },
+    float = true,
+    center = true,
+    size = { 2000, 2000},
+})
+
+
 -- Avoid background bleeding into photo when focus moved to edit
 -- popup window
 hl.window_rule({
